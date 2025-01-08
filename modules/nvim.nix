@@ -3,6 +3,11 @@
 {
 
   xdg = {
+    configFile.nvim = {
+      source = "./nvim";
+      recursive = true;
+    };
+
     desktopEntries."nvim" = lib.mkIf pkgs.stdenv.isLinux {
       name = "NeoVim";
       comment = "Edit text files";
@@ -18,7 +23,6 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
   };
-
   
   programs.neovim = {
     enable = true;

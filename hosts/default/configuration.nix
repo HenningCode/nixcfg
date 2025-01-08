@@ -80,10 +80,8 @@
       alacritty
       discord
       tmux
-      fastfetch
       seafile-client
       rofi-wayland
-      sqlite
       hypridle
       hyprlock
       hyprpaper
@@ -91,10 +89,7 @@
       grim
       slurp
       swappy
-      wl-clipboard
-      tree
       hyprpicker
-      htop
     ];
   };
 
@@ -109,7 +104,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    tree
+    sqlite
+    fastfetch
+    wl-clipboard
+  ];
 
   environment.variables = {
     LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
