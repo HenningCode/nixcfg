@@ -1,10 +1,12 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, inputs, ...}: {
-
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.home-manager.nixosModules.default
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
   # Bootloader.
@@ -15,7 +17,6 @@
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
-
   networking.hostName = "nixos"; # Define your hostname.
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -43,7 +44,6 @@
   # DEs
 
   services.displayManager.ly.enable = true;
-  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -74,26 +74,15 @@
     description = "Henning";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-      starship
-      yazi
       ueberzugpp
       alacritty
       discord
-      tmux
       seafile-client
-      rofi-wayland
-      hypridle
-      hyprlock
-      hyprpaper
       nwg-look
-      grim
-      slurp
-      swappy
-      hyprpicker
     ];
   };
 
-  fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
+  fonts.packages = with pkgs; [nerd-fonts.jetbrains-mono];
 
   # Install additonal programs.
   programs.firefox.enable = true;
@@ -105,25 +94,24 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    starship
     tree
     sqlite
     fastfetch
     wl-clipboard
+    yazi
+    tmux
   ];
-
-  environment.variables = {
-    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
-  };
 
   services.openssh.enable = true;
 
   home-manager = {
-      extraSpecialArgs = { inherit inputs; };
-      users."henning" = {
-          imports = [
-            ./home.nix
-          ];
-      };
+    extraSpecialArgs = {inherit inputs;};
+    users."henning" = {
+      imports = [
+        ./home.nix
+      ];
+    };
   };
 
   ###################

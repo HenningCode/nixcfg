@@ -1,10 +1,11 @@
-{ config, pkgs, lib, ... }:
-
 {
-
+  pkgs,
+  lib,
+  ...
+}: {
   xdg = {
-    configFile.nvim = {
-      source = "./nvim";
+    configFile."nvim" = {
+      source = ./nvim;
       recursive = true;
     };
 
@@ -23,27 +24,28 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
   };
-  
+
   programs.neovim = {
     enable = true;
     viAlias = true;
     vimAlias = true;
-
-    withRuby = true;
-    withNodeJs = true;
     withPython3 = true;
 
+    plugins = [
+      {
+        plugin = pkgs.vimPlugins.sqlite-lua;
+        config = "let g:sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
+      }
+    ];
+
     extraPackages = with pkgs; [
-      git
+      # utils
       gcc
-      unzip
-      wget
-      curl
-      tree-sitter
       ripgrep
       fd
       fzf
 
+      # formatter's and lsp's
       nixd
       lua-language-server
       stylua

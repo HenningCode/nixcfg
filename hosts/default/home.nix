@@ -1,17 +1,12 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
-
+{...}: {
   imports = [
     ../../modules/nvim.nix
+    ../../modules/hyprland.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "henning";
   home.homeDirectory = "/home/henning";
-
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
