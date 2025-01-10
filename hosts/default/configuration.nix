@@ -4,10 +4,12 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+in {
   imports = [
     inputs.home-manager.nixosModules.default
     ./hardware-configuration.nix
+    ../../../nixosModules/hyprland.nix
   ];
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -22,6 +24,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  # services.getty.autologinUser = "henning";
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -41,16 +44,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # DEs
-
-  services.displayManager.ly.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "euro";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.avahi = {
@@ -60,7 +53,7 @@
   };
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -101,7 +94,13 @@
     wl-clipboard
     yazi
     tmux
+    sqlite
+    molly-guard
   ];
+
+  environment.variables = {
+    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
+  };
 
   services.openssh.enable = true;
 

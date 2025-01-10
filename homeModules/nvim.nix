@@ -31,13 +31,6 @@
     vimAlias = true;
     withPython3 = true;
 
-    plugins = [
-      {
-        plugin = pkgs.vimPlugins.sqlite-lua;
-        config = "let g:sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.so'";
-      }
-    ];
-
     extraPackages = with pkgs; [
       # utils
       gcc
