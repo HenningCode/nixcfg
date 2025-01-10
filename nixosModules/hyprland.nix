@@ -1,30 +1,21 @@
-{
-  config,
-  lib,
-  ...
-}: let
-  session = {
-    command = "${lib.getExe config.programs.uwsm.package} start hyprland-uwsm.desktop";
-    user = "henning";
-  };
+{pkgs, ...}:let
+  sddmTheme = import ./sddm-theme.nix {inherit pkgs;};
 in {
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = session;
-  #     initial_session = session;
-  #   };
-  # };
-
   services.xserver.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    # theme = "";
+    theme = "${sddmTheme}";
   };
 
   programs.hyprland = {
     enable = true;
     withUWSM = true;
   };
+  
+  environment.systemPackages = with pkgs; [
+    libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects
+  ];
+
 }

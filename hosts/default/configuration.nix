@@ -9,7 +9,7 @@ in {
   imports = [
     inputs.home-manager.nixosModules.default
     ./hardware-configuration.nix
-    ../../../nixosModules/hyprland.nix
+    ../../nixosModules/hyprland.nix
   ];
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;

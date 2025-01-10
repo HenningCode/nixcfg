@@ -1,7 +1,7 @@
 {...}: {
   imports = [
-    ../../modules/nvim.nix
-    ../../modules/hyprland.nix
+    ../../homeModules/nvim.nix
+    ../../homeModules/hyprland.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

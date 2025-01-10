@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  wallpaper = "/home/henning/dotfiles/modules/hypr/gargantua.jpg";
+  wallpaper = "/home/henning/dotfiles/homeModules/hypr/gargantua.jpg";
 in {
   home.packages = with pkgs; [
     rofi-wayland
