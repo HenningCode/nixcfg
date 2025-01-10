@@ -8,13 +8,21 @@
     user = "henning";
   };
 in {
-  services.greetd = {
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = session;
+  #     initial_session = session;
+  #   };
+  # };
+
+  services.xserver.enable = true;
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      default_session = session;
-      initial_session = session;
-    };
+    wayland.enable = true;
+    # theme = "";
   };
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
