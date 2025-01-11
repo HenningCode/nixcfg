@@ -1,5 +1,6 @@
-{...}: {
+{inputs, ...}: {
   imports = [
+    inputs.ags.homeManagerModules.default
     ../../homeModules/nvim.nix
     ../../homeModules/hyprland.nix
     ../../homeModules/alacritty.nix
@@ -7,6 +8,7 @@
     ../../homeModules/firefox.nix
     ../../homeModules/ags.nix
   ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "henning";
