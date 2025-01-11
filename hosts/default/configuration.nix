@@ -67,7 +67,6 @@ in {
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       discord
-      steam
       seafile-client
     ];
   };
@@ -77,6 +76,7 @@ in {
   # Install additonal programs.
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+  programs.steam.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

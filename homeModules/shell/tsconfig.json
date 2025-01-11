@@ -9,7 +9,7 @@
         // "checkJs": true,
         // "allowJs": true,
         "jsx": "react-jsx",
-        "jsxImportSource": "/home/henning/.local/share/ags/gtk3",
+        "jsxImportSource": "/home/henning/.local/share/ags/gtk4",
         "paths": {
             "astal": [
                 "/home/henning/.local/share/ags"

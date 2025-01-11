@@ -1,16 +1,9 @@
-import { App } from "astal/gtk3";
-import style from "./style.scss";
+import { App, Gdk, Gtk } from "astal/gtk4";
 import Bar from "./widget/Bar";
 
+
 App.start({
-    css: style,
-    instanceName: "js",
     main() {
-        Bar(0);
-        Bar(1);
-    },
-    requestHandler(request, res) {
-        print(request)
-        res("ok")
-    },
+        Bar(0)
+    }
 })

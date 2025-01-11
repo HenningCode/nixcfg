@@ -4,9 +4,6 @@
 }: let
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
-  home.file = {
-    ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
-  };
 
   gtk = {
     enable = true;
@@ -17,8 +14,8 @@ in {
     };
 
     iconTheme = {
-      name = "GruvboxPlus";
-      package = gruvboxPlus;
+      name = "oomox-gruvbox-dark";
+      package = pkgs.gruvbox-dark-icons-gtk;
     };
   };
 
