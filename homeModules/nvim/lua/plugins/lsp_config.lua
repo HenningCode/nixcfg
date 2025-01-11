@@ -50,6 +50,10 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+        lspconfig.ts_ls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
         lspconfig.nixd.setup({
             capabilities = capabilities,
             on_attach = on_attach,

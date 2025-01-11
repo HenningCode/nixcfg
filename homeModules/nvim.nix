@@ -45,6 +45,7 @@
       fzf
 
       # formatter's and lsp's
+      typescript-language-server
       nixd
       lua-language-server
       stylua
