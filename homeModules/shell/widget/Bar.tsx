@@ -7,6 +7,15 @@ import Wp from "gi://AstalWp"
 import Network from "gi://AstalNetwork"
 import Tray from "gi://AstalTray"
 
+function SystemIcon() {
+    return <box className="Icon">
+        <icon
+            className={"NixOS-Icon"}
+            icon={"/home/henning/.shellAssets/nixos.svg"}
+        />
+    </box>
+}
+
 function SysTray() {
     const tray = Tray.get_default()
 
@@ -26,6 +35,7 @@ function SysTray() {
 function Wifi() {
     const network = Network.get_default()
     const wifi = bind(network, "wifi")
+    print(wifi)
 
     return <box visible={wifi.as(Boolean)}>
         {wifi.as(wifi => wifi && (
@@ -130,6 +140,7 @@ export default function Bar(monitor = 0) {
         anchor={TOP | LEFT | RIGHT}>
         <centerbox>
             <box hexpand halign={Gtk.Align.START}>
+                <SystemIcon />
                 <Workspaces />
             </box>
             <box>

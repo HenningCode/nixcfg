@@ -18,4 +18,8 @@
       inputs.ags.packages.${pkgs.system}.network
     ];
   };
+
+  home.file = {
+    ".shellAssets/".source = ./shell/assets;
+  };
 }
