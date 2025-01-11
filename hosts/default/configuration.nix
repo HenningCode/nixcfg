@@ -2,8 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   pkgs,
-  inputs,
-  ...
+  inputs, ...
 }: let
 in {
   imports = [
@@ -67,19 +66,15 @@ in {
     description = "Henning";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-      ueberzugpp
-      alacritty
       discord
+      steam
       seafile-client
-      nwg-look
     ];
   };
 
   fonts.packages = with pkgs; [nerd-fonts.jetbrains-mono];
 
   # Install additonal programs.
-  programs.firefox.enable = true;
-  programs.steam.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
@@ -92,10 +87,9 @@ in {
     sqlite
     fastfetch
     wl-clipboard
-    yazi
     tmux
     sqlite
-    molly-guard
+    killall
   ];
 
   environment.variables = {

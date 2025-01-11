@@ -2,6 +2,9 @@
   imports = [
     ../../homeModules/nvim.nix
     ../../homeModules/hyprland.nix
+    ../../homeModules/alacritty.nix
+    ../../homeModules/yazi.nix
+    ../../homeModules/firefox.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

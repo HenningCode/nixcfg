@@ -1,15 +1,6 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
-  # nvim - DreamMaoMao/yazi.nvim
-
+{...}: {
   programs.yazi = {
     enable = true;
-    enableZshIntegration = true;
-    # package = inputs.yazi.packages."x86_64-linux".default;
     settings = {
       # log = {
       #   enabled = false;
