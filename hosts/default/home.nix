@@ -5,6 +5,7 @@
     ../../homeModules/alacritty.nix
     ../../homeModules/yazi.nix
     ../../homeModules/firefox.nix
+    ../../homeModules/ags.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

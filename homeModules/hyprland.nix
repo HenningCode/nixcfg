@@ -9,22 +9,19 @@ in {
     hyprpicker
   ];
 
-  xdg = {
-    configFile."hypr" = {
-      source = ./hypr;
-      recursive = true;
-    };
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd = {
-      enable = true;
-      variables = ["--all"];
-    };
+    extraConfig = builtins.readFile (builtins.path {
+        path = ./hypr/hyprland.conf;
+    });
   };
 
-  programs.hyprlock.enable = true;
+  programs.hyprlock = {
+    enable = true;
+    extraConfig = builtins.readFile (builtins.path {
+        path = ./hypr/hyprlock.conf;
+    });
+  };
 
   services.hyprpaper = {
     enable = true;

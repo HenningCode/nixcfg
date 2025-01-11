@@ -18,10 +18,10 @@ in {
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
-  networking.hostName = "nixos"; # Define your hostname.
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
+  networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
   # services.getty.autologinUser = "henning";
 
