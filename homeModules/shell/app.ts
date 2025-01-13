@@ -1,9 +1,11 @@
 import { App, Gdk, Gtk } from "astal/gtk4";
-import Bar from "./widget/Bar";
+import style from "./style.scss";
+import Bar from "./widget/bar";
 
 
 App.start({
+    css: style,
     main() {
-        Bar(0)
+        App.get_monitors().map((monitor) => Bar(monitor));
     }
 })

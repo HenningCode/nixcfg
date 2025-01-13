@@ -1,0 +1,35 @@
+@use "theme";
+
+.bar {
+  & > box {
+
+    border-radius: 2em;
+    margin: 10px 10px 0px 10px;
+    padding: 4px 6px;
+  }
+}
+
+
+#workspaces {
+  background-color: theme.$view-bg-color;
+  padding: 2px 12px;
+  border-radius: 1em;
+
+}
+
+.workspace {
+  background-color: theme.$inactive_color;
+  min-width: 16px;
+
+  &.active {
+    background-color: theme.$active_color;
+  }
+
+  &:hover{
+    background-color: theme.$active_color;
+  }
+}
+
+.bar_tray-item {
+  background-color: theme.$active_color;
+}
