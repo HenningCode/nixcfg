@@ -12,6 +12,7 @@
     ../../homeModules/firefox.nix
     ../../homeModules/ags.nix
     ../../homeModules/gtk
+    ../../homeModules/helix.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -28,7 +29,6 @@
     enable = true;
     userName = "HenningCode";
     userEmail = "henningwilmer@yahoo.de";
-    extraConfig = {credential.helper = "oauth";};
   };
 
 
