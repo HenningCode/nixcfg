@@ -1,18 +1,16 @@
 {pkgs}: let
-  link = "https://github.com/CptPotato/helix-themes/releases/tag/latest/helix-themes-latest.zip";
+  link = "https://github.com/CptPotato/helix-themes/releases/tag/latest/build.tar.gz";
 in
   pkgs.stdenv.mkDerivation {
     name = "gruvbox-material-helix";
 
     src = pkgs.fetchurl {
       url = link;
-      sha256 = "sha256-i/AzhYz/ACeXsG5j0kDVfvfA4TwxA3KZJTPwCO4BKmc=";
+      sha256 = "sha256-4FQgqHCXcZXokUuE2OMFBshXBzaab3UlR1Po/3GTu3Q=";
     };
 
-    dontUnpack = true;
-
-    installPhase = ''
+    unpackPhase = ''
       mkdir -p $out
-      ${pkgs.unzip}/bin/unzip $src -d $out/
+      tar -xzf $src -C $out
     '';
   }

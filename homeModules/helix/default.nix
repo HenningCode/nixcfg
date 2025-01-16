@@ -1,8 +1,6 @@
-{pkgs, ...}: let
-  gruvboxMaterial = import ./gruvbox-material.nix {inherit pkgs;};
-in {
+{pkgs, ...}: {
   home.file = {
-    ".config/helix/themes".source = "$gruvboxMaterial";
+    ".config/helix/themes".source = ./gruvbox_material_dark_medium.toml;
   };
 
   programs.helix = {
