@@ -11,8 +11,10 @@
     ../../homeModules/yazi.nix
     ../../homeModules/firefox.nix
     ../../homeModules/ags.nix
+    ../../homeModules/ghostty.nix
     ../../homeModules/gtk
-    ../../homeModules/helix.nix
+    ../../homeModules/helix
+    ../../homeModules/rofi
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

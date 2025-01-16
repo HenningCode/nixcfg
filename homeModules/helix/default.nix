@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  gruvboxMaterial = import ./gruvbox-material.nix {inherit pkgs;};
+in {
+  home.file = {
+    ".config/helix/themes".source = "$gruvboxMaterial";
+  };
+
   programs.helix = {
     enable = true;
     settings = {
@@ -17,8 +23,10 @@
         C-h = "jump_view_left";
         C-j = "jump_view_down";
         C-k = "jump_view_up";
-          C-l = "jump_view_right";
-        "C-=" = ":format";
+        C-l = "jump_view_right";
+      };
+      keys.normal.space = {
+        "=" = ":format";
       };
     };
     languages = {

@@ -2,7 +2,6 @@
   wallpaper = "/home/henning/dotfiles/homeModules/hypr/gargantua.jpg";
 in {
   home.packages = with pkgs; [
-    rofi-wayland
     grim
     slurp
     swappy
