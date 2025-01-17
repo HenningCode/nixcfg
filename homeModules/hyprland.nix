@@ -63,4 +63,7 @@ in {
       ];
     };
   };
+
+  services.swaync.enable = true;
+  programs.waybar.enable = true;
 }
