@@ -13,7 +13,6 @@
     ../../homeModules/ags.nix
     ../../homeModules/ghostty.nix
     ../../homeModules/gtk
-    ../../homeModules/helix
     ../../homeModules/rofi
   ];
 

@@ -90,6 +90,7 @@ in {
     tmux
     sqlite
     killall
+    pulseaudio
   ];
 
   environment.variables = {
