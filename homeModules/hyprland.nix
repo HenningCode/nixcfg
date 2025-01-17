@@ -64,6 +64,17 @@ in {
     };
   };
 
+  xdg.configFile."swaync" = {
+    source = ./swaync;
+    recursive = true;
+  };
+
   services.swaync.enable = true;
+
+  xdg.configFile."waybar" = {
+    source = ./waybar;
+    recursive = true;
+  };
+
   programs.waybar.enable = true;
 }

@@ -1,8 +1,8 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "height": 35,
-  "width": 1500,
+  "width": 2200,
   "spacing": 5,
   "margin-bottom" :5,
   "margin-right" :8,
@@ -12,21 +12,16 @@
     "custom/rofi",
     "hyprland/workspaces",
     "custom/paddc",
-    "hyprland/window",
     "custom/paddc",
     "tray",
   ],
 
-  "modules-center": ["mpris"],
+  "modules-center": [
+    "hyprland/window"
+  ],
 
   "modules-right": [
     "pulseaudio",
-    "custom/backlight",
-    "hyprland/language",
-    "custom/paddc",
-    "bluetooth",
-    // "custom/paddc",
-    "battery",
     "custom/paddc",
     "custom/notification",
     "custom/paddc",
@@ -38,8 +33,8 @@
   ],
 
   "custom/rofi": {
-		"format": "<span color='#fbf1c7' >󰮯</span>",
-		"on-click": "rofi -show drun",
+    "format": "<span color='#fbf1c7' >󰮯</span>",
+    "on-click": "rofi -show drun",
     "on-click-right": "sh ~/.config/waybar/scripts/power-menu.sh",
     "escape" : true,
     "tooltip" : false
@@ -95,30 +90,6 @@
     "max-volume": 130
   },
 
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-
-  "battery": {
-    "interval": 1,
-    "states": {
-      "good": 99,
-      "warning": 30,
-      "critical": 20
-    },
-    "format-icons": [" "," "," "," "," "],
-    "format": "<span color='#8ec07c' > {icon}</span>{capacity}%",
-    "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%",
-    "format-warning": "<span color='#d8a657' > {icon}</span>{capacity}%",
-    "format-full": "<span color='#8ec07c' > {icon}</span>{capacity}%",
-    "format-charging": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
-    "format-charging-warning": "<span color='#d8a657' > 󰢝 </span>{capacity}%",
-    "format-charging-critical": "<span color='#cc241d' > 󰢜 </span>{capacity}%",
-    "format-plugged": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
-    "format-alt": "<span color='#8ec07c' > 󱧥 </span>{time}",
-    "tooltip": false
-  },
-
   "clock#date": {
     "format": "<span color='#8ec07c' >󰃭 </span>{:%a %d %b}",
     "tooltip": false,
@@ -132,31 +103,9 @@
     "max-length": 12
   },
 
-  "custom/backlight": {
-    "exec": "~/.config/waybar/scripts/brightness-control.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
-    "interval": 1,
-    "min-length": 6,
-    "max-length": 6
-  },
-
   "custom/paddc": {
     "format": " ",
     "tooltip": false,
-  },
-
-  "hyprland/language": {
-    "format": "{}",
-    "format-en": "US",
-  },
-
-  "mpris": {
-    "format": "<span color='#cc241d'> 󰎇  </span>  {artist} - {title}  ",
-    "max-length": 40,
   },
 
   "custom/wifi": {
@@ -168,29 +117,6 @@
     "interval": 1,
     "min-length": 1,
     "max-length": 12
-  },
-
-  "bluetooth": {
-    "format": "<span color='#458588'>󰂰 </span>",
-    "format-disabled": "<span color='#458588'>󰂲 </span>",
-    "format-connected": "<span color='#458588'>󰂱 </span>",
-    "format-connected-battery": "<span color='#458588'>󰂱 </span>",
-
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{num_connections} connected\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      "{device_alias}: {device_battery_percentage}%",
-
-    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 10
   },
 
   "custom/notification": {

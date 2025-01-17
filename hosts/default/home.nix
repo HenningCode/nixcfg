@@ -10,7 +10,6 @@
     ../../homeModules/alacritty.nix
     ../../homeModules/yazi.nix
     ../../homeModules/firefox.nix
-    ../../homeModules/ags.nix
     ../../homeModules/ghostty.nix
     ../../homeModules/gtk
     ../../homeModules/rofi
