@@ -22,6 +22,6 @@ case "$selected_option" in
   systemctl suspend
   ;;
 *Logout)
-  loginctl kill-user $(whoami)
+  uwsm stop
   ;;
 esac

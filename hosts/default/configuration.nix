@@ -91,6 +91,7 @@ in {
     sqlite
     killall
     pulseaudio
+    pavucontrol
   ];
 
   environment.variables = {

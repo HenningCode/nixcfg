@@ -46,8 +46,10 @@ window#waybar {
 #temperature.critical,
 #backlight,
 #custom-memory,
-#pulseaudio,
-#pulseaudio.muted,
+#pulseaudio.output,
+#pulseaudio.output.muted,
+#pulseaudio.source,
+#pulseaudio.source.source-muted,
 #clock {
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 14px;
@@ -65,8 +67,10 @@ window#waybar {
 #temperature.critical,
 #backlight,
 #custom-memory,
-#pulseaudio,
-#pulseaudio.muted,
+#pulseaudio.output,
+#pulseaudio.output.muted,
+#pulseaudio.source,
+#pulseaudio.source.source-muted,
 #clock {
   padding-right: 4px;
   margin: 5px 0px;
@@ -182,14 +186,6 @@ window#waybar {
 }
 
 /* ================================ */
-/*            backlight             */
-/* ================================ */
-#custom-backlight {
-  color: #f6c657;
-  background: #3c3835;
-}
-
-/* ================================ */
 /*            memory                */
 /* ================================ */
 #custom-memory {
@@ -200,12 +196,13 @@ window#waybar {
 /* ================================ */
 /*         pulseaudio               */
 /* ================================ */
-#pulseaudio {
+#pulseaudio.output
+#pulseaudio.source {
   color: #fbf1c7;
   background: #3c3835;
 }
-
-#pulseaudio.muted {
+#pulseaudio.output.muted
+#pulseaudio.source.source-muted { 
   color: #ea6962;
   background: #3c3835;
 }
@@ -223,18 +220,11 @@ window#waybar {
   background: #3c3835;
 }
 
-#mpris {
-  color: #282828;
-  border: 2px solid #3c3835;
-  border-radius: 21px;
-  background: #fbf1c7;
-  padding: 5px 5px;
-  margin: 1px 1px; 
-}
-
 #custom-notification {
-  color: #fbf1c7;
+  color:#fbf1c7;
   font-size: 14px;
   background: #3c3835;
-  padding: 2px 2px;
+  /*padding: 2px 0px;*/
+  padding-right: 4px;
+  margin: 5px 0px;
 }

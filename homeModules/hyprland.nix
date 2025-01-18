@@ -76,5 +76,8 @@ in {
     recursive = true;
   };
 
-  programs.waybar.enable = true;
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+  };
 }
