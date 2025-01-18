@@ -6,8 +6,7 @@
 }: let
 in {
   imports = [
-    inputs.home-manager.nixosModules.default
-    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default ./hardware-configuration.nix
     ../../nixosModules/hyprland.nix
   ];
   # Bootloader.
@@ -99,6 +98,7 @@ in {
   };
 
   services.openssh.enable = true;
+  programs.ssh.askPassword = "";
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};

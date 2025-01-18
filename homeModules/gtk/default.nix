@@ -1,21 +1,15 @@
-{
-  pkgs,
-  ...
-}: let
-  gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
-in {
-
+{pkgs, ...}: {
   gtk = {
     enable = true;
 
     theme = {
       name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-gtk-theme;
+      package = pkgs.gruvbox-material-gtk-theme;
     };
 
     iconTheme = {
-      name = "oomox-gruvbox-dark";
-      package = pkgs.gruvbox-dark-icons-gtk;
+      name = "GruvboxPlus";
+      package = pkgs.gruvbox-plus-icons;
     };
   };
 
@@ -23,5 +17,4 @@ in {
     enable = true;
     platformTheme.name = "gtk";
   };
-
 }

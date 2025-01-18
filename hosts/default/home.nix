@@ -23,6 +23,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.nautilus
   ];
 
   programs.git = {
@@ -31,7 +32,6 @@
     userEmail = "henningwilmer@yahoo.de";
   };
 
-  programs.ssh.askPassword = "";
 
 
   # You should not change this value, even if you update Home Manager. If you do
