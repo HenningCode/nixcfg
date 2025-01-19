@@ -13,7 +13,7 @@
     "hyprland/workspaces",
     "custom/paddc",
     "cpu",    
-    "custom/paddc",
+    "custom/gpu-usage",
     "memory",
     "custom/paddc",
     "tray",
@@ -67,14 +67,20 @@
   },
 
   "cpu": {
-    "interval": 10,
-    "format": " {}%",
-    "max-length": 10
+    "interval": 1,
+    "format": "CPU{usage:3}%",
   },
 
   "memory": {
-    "interval": 10,
-    "format": " {}%",
+    "interval": 4,
+    "format": "MEM{percentage:3}%",
+  },
+
+  "custom/gpu-usage": {
+      "exec": "radeontop -d - -l 1 | tr -d '\n' | cut -s -d ',' -f3 | cut -s -d ' ' -f3 | tr -d '%' | cut -d '.' -f 1 | awk '{ print $1 }' | tr -d '\n'",
+      "format": "GPU {}%",
+      "return-type": "",
+      "interval": 4
   },
 
   "hyprland/window": {

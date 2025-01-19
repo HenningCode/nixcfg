@@ -7,10 +7,10 @@
       package = pkgs.gruvbox-material-gtk-theme;
     };
 
-    iconTheme = {
-      name = "GruvboxPlus";
-      package = pkgs.gruvbox-plus-icons;
-    };
+    # iconTheme = {
+    #   name = "GruvboxPlus";
+    #   package = pkgs.gruvbox-plus-icons;
+    # };
   };
 
   qt = {

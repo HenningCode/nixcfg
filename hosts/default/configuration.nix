@@ -96,6 +96,8 @@ in {
     pulseaudio
     pavucontrol
     simple-scan
+    heroic
+    gparted
   ];
 
   environment.variables = {
@@ -103,6 +105,7 @@ in {
   };
 
   services.openssh.enable = true;
+
   programs.ssh.askPassword = "";
 
   home-manager = {

@@ -15,9 +15,9 @@
 
 /* the whole window */
 window#waybar {
-  background: #3c3835;
+  background: #282828;
   color: #fff4d2;
-  padding: 0px 5px;
+  padding: 0px 0px;
   margin: 0;
   border-radius: 15px;
 }
@@ -79,7 +79,7 @@ window#waybar {
 #custom-rofi {
   /* border: 2px solid #458588; */
   /* border-radius: 5px; */
-  background: #3c3835;
+  background: #282828;
   padding: 0 6px;
   margin: 5px 0px;
 }
@@ -93,7 +93,7 @@ window#waybar {
 
 #workspaces button {
   color: #fff4d2;
-  background: #3c3835;
+  background: #282828;
   /* border: 2px solid #fff4d2; */
   min-width: 25px;
   padding: 0 4px;
@@ -101,7 +101,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: #3c3835;
+  background: #282828;
   border: 2px solid #b16286;
   border-radius: 12px;
 }
@@ -109,25 +109,25 @@ window#waybar {
 #workspaces button.visible {
   border: 2px solid #689d6a;
   border-radius: 12px;
-  background: #3c3835;
+  background: #282828;
 }
 
 #workspaces button.visible:hover {
   border: 2px solid #689d6a;
   border-radius: 12px;
-  background: #3c3835;
+  background: #282828;
 }
 
 #workspaces button.active {
   border: 2px solid #689d6a;
   border-radius: 12px;
-  background: #3c3835;
+  background: #282828;
 }
 
 #workspaces button.active:hover {
   border: 2px solid #689d6a;
   border-radius: 12px;
-  background: #3c3835;
+  background: #282828;
 }
 
 #workspaces button.urgent {
@@ -142,7 +142,7 @@ window#waybar {
 
 #window {
   color: #a89884;
-  background: #3c3835;
+  background: #282828;
   /* border: 2px solid #d3869b; */
 }
 
@@ -152,7 +152,7 @@ window#waybar {
 
 #tray {
   /* padding: 0 6px; */
-  background: #3c3835;
+  background: #282828;
 }
 
 /* ================================ */
@@ -169,7 +169,7 @@ window#waybar {
 /* ================================ */
 #cpu {
   color: #fbf1c7;
-  background: #3c3835;
+  background: #282828;
 }
 
 /* ================================ */
@@ -178,12 +178,13 @@ window#waybar {
 #pulseaudio.output
 #pulseaudio.source {
   color: #fbf1c7;
-  background: #3c3835;
+  background: #282828;
 }
+
 #pulseaudio.output.muted
 #pulseaudio.source.source-muted { 
   color: #ea6962;
-  background: #3c3835;
+  background: #282828;
 }
 
 /* ================================ */
@@ -191,18 +192,18 @@ window#waybar {
 /* ================================ */
 #clock.time {
   color: #fbf1c7;
-  background: #3c3835;
+  background: #282828;
 }
 
 #clock.date {
   color: #fbf1c7;
-  background: #3c3835;
+  background: #282828;
 }
 
 #custom-notification {
   color:#fbf1c7;
   font-size: 14px;
-  background: #3c3835;
+  background: #282828;
   /*padding: 2px 0px;*/
   padding-right: 4px;
   margin: 5px 0px;

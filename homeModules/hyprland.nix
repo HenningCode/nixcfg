@@ -6,6 +6,7 @@ in {
     slurp
     swappy
     hyprpicker
+    radeontop
   ];
 
   wayland.windowManager.hyprland = {
