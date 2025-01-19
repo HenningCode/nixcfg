@@ -22,7 +22,6 @@ in {
   # Enable networking
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
-  # services.getty.autologinUser = "henning";
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -48,6 +47,11 @@ in {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
+  };
+
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.hplipWithPlugin ];
   };
 
   # Enable sound with pipewire.
@@ -91,6 +95,7 @@ in {
     killall
     pulseaudio
     pavucontrol
+    simple-scan
   ];
 
   environment.variables = {
