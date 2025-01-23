@@ -17,6 +17,8 @@ in {
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
+
+  boot.supportedFilesystems = [ "ntfs" ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
@@ -91,6 +93,7 @@ in {
     fastfetch
     wl-clipboard
     tmux
+    zellij
     sqlite
     killall
     pulseaudio

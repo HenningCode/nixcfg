@@ -24,6 +24,7 @@
   # environment.
   home.packages = [
     pkgs.nautilus
+    pkgs.dolphin
   ];
 
   programs.git = {

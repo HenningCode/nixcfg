@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  wallpaper = "/home/henning/dotfiles/homeModules/hypr/gargantua.jpg";
+  wallpaper = "/home/henning/dotfiles/homeModules/hypr/mountain.jpg";
 in {
   home.packages = with pkgs; [
     grim
@@ -31,7 +31,7 @@ in {
       preload = [wallpaper];
 
       wallpaper = [
-        "DP-4, ${wallpaper}"
+        "DP-4,${wallpaper}"
         "DP-5,${wallpaper}"
       ];
     };
