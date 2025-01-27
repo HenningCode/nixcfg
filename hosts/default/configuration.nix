@@ -2,11 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   pkgs,
-  inputs, ...
+  inputs,
+  ...
 }: let
 in {
   imports = [
-    inputs.home-manager.nixosModules.default ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ./hardware-configuration.nix
     ../../nixosModules/hyprland.nix
   ];
   # Bootloader.
@@ -18,7 +20,7 @@ in {
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
 
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = ["ntfs"];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
@@ -53,7 +55,7 @@ in {
 
   hardware.sane = {
     enable = true;
-    extraBackends = [ pkgs.hplipWithPlugin ];
+    extraBackends = [pkgs.hplipWithPlugin];
   };
 
   # Enable sound with pipewire.
@@ -117,6 +119,33 @@ in {
       imports = [
         ./home.nix
       ];
+    };
+  };
+
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+    image = ../../homeModules/hypr/mountain.jpg;
+    fonts = {
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font Mono";
+      };
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
+      };
+
+      sizes = {
+        applications = 10;
+        terminal = 13;
+        desktop = 10;
+        popups = 10;
+      };
     };
   };
 

@@ -1,10 +1,8 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
   imports = [
-    inputs.ags.homeManagerModules.default
     ../../homeModules/nvim.nix
     ../../homeModules/hyprland.nix
     ../../homeModules/alacritty.nix
@@ -23,8 +21,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.nautilus
-    pkgs.dolphin
+    pkgs.xfce.thunar
   ];
 
   programs.git = {
@@ -32,7 +29,6 @@
     userName = "HenningCode";
     userEmail = "henningwilmer@yahoo.de";
   };
-
 
 
   # You should not change this value, even if you update Home Manager. If you do

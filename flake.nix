@@ -9,17 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:danth/stylix";
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    astal = {
-        url = "github:aylur/astal";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ags = {
-        url = "github:aylur/ags";
-        inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -30,6 +26,7 @@
         modules = [
           ./hosts/default/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
         ];
       };
       # laptop = nixpkgs.lib.nixosSystem {
