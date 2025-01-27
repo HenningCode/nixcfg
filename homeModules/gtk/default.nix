@@ -1,16 +1,27 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
+in {
+  home.file = {
+    ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
+  };
+
   gtk = {
     enable = true;
 
     theme = {
-      name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-material-gtk-theme;
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
     };
 
-    # iconTheme = {
-    #   name = "GruvboxPlus";
-    #   package = pkgs.gruvbox-plus-icons;
-    # };
+    cursorTheme = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+    };
+
+    iconTheme = {
+      name = "GruvboxPlus";
+      package = gruvboxPlus;
+    };
   };
 
   qt = {
