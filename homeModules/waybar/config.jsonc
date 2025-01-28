@@ -37,7 +37,7 @@
   ],
 
   "custom/rofi": {
-    "format": "<span color='#fbf1c7' >󰮯</span>",
+    "format": "<span color='#fbf1c7' ></span>",
     "on-click": "rofi -show drun",
     "on-click-right": "sh ~/.config/waybar/scripts/power-menu.sh",
     "escape" : true,
@@ -52,18 +52,9 @@
     "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      "1": "<span color='#cc241d' >󰊠</span>",
-      "2": "<span color='#98971a' >󰊠</span>",
-      "3": "<span color='#d79921' >󰊠</span>",
-      "4": "<span color='#458588' >󰊠</span>",
-      "5": "<span color='#b16286' >󰊠</span>",
-      "6": "<span color='#689d6a' >󰊠</span>",
-      "7": "<span color='#fe8019' >󰊠</span>",
-      "default": "<span color='#cc241d'>󰊠</span>",
+        "default": "",
+        "active": "",
     },
-    "persistent-workspaces": {
-        "*": 5
-    }
   },
 
   "cpu": {

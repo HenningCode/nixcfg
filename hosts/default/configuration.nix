@@ -58,6 +58,16 @@ in {
     extraBackends = [pkgs.hplipWithPlugin];
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true; 
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"];
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -83,7 +93,6 @@ in {
   # Install additonal programs.
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
-  programs.steam.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

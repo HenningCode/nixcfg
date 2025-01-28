@@ -31,13 +31,6 @@ window#waybar {
 }
 
 #custom-rofi,
-#workspaces button,
-#workspaces button:hover,
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover,
-#workspaces button.urgent,
 #window,
 #tray,
 #disk,
@@ -79,6 +72,7 @@ window#waybar {
 #custom-rofi {
   /* border: 2px solid #458588; */
   /* border-radius: 5px; */
+  font-size: 20px;
   background: #282828;
   padding: 0 6px;
   margin: 5px 0px;
@@ -87,6 +81,7 @@ window#waybar {
 /* ================================ */
 /*       workspaces module          */
 /* ================================ */
+
 #workspaces {
   margin: 0px;
 }
@@ -94,7 +89,6 @@ window#waybar {
 #workspaces button {
   color: #fff4d2;
   background: #282828;
-  /* border: 2px solid #fff4d2; */
   min-width: 25px;
   padding: 0 4px;
   margin: 5px 3px;
@@ -102,38 +96,8 @@ window#waybar {
 
 #workspaces button:hover {
   background: #282828;
-  border: 2px solid #b16286;
+  border: 2px solid #fff4d2;
   border-radius: 12px;
-}
-
-#workspaces button.visible {
-  border: 2px solid #689d6a;
-  border-radius: 12px;
-  background: #282828;
-}
-
-#workspaces button.visible:hover {
-  border: 2px solid #689d6a;
-  border-radius: 12px;
-  background: #282828;
-}
-
-#workspaces button.active {
-  border: 2px solid #689d6a;
-  border-radius: 12px;
-  background: #282828;
-}
-
-#workspaces button.active:hover {
-  border: 2px solid #689d6a;
-  border-radius: 12px;
-  background: #282828;
-}
-
-#workspaces button.urgent {
-  border: 2px solid #cc241d;
-  border-radius: 12px;
-  background: #ea6962;
 }
 
 /* ================================ */
@@ -155,14 +119,6 @@ window#waybar {
   background: #282828;
 }
 
-/* ================================ */
-/*            disk                 */
-/* ================================ */
-
-#disk {
-  color: #ea6962;
-  border: 2px solid #ea6962;
-}
 
 /* ================================ */
 /*            cpu                  */

@@ -3,13 +3,14 @@
   ...
 }: {
   
-  home.packages = [pkgs.rofi-wayland];
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+  };
 
   xdg.configFile."rofi/config.rasi".text = ''
      configuration {
-        show-icons: true;
         font: "JetBrains Mono 12";
-        icon-theme: "Papirus-Dark";
 
         display-ssh:    "󰣀 ssh:";
         display-run:    "󱓞 run:";
