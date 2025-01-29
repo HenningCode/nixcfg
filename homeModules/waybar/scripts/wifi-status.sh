@@ -161,16 +161,16 @@ fi
 
 # Determine Wi-Fi icon based on signal strength
 if [ "$signal" -ge 80 ]; then
-  icon="󰖩  " # Strong signal
+  icon="󰖩 " # Strong signal
 elif [ "$signal" -ge 60 ]; then
-  icon="󰖩  " # Good signal
+  icon="󰖩 " # Good signal
 elif [ "$signal" -ge 40 ]; then
-  icon="󰖩  " # Weak signal
+  icon="󰖩 " # Weak signal
 elif [ "$signal" -ge 20 ]; then
-  icon="󰖩  " # Very weak signal
+  icon="󰖩 " # Very weak signal
 else
   icon="󰖪 " # No signal
 fi
 
 # Module and tooltip
-echo "{\"text\": \"${icon} ${essid}\", \"tooltip\": \"${tooltip}\"}"
+echo "{\"text\":\"${icon}${essid}\", \"tooltip\": \"${tooltip}\"}"

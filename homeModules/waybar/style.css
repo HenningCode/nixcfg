@@ -11,6 +11,9 @@
   text-shadow: none;
   transition: none;
   box-shadow: none;
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* the whole window */
@@ -30,45 +33,6 @@ window#waybar {
   padding-right: 5px;
 }
 
-#custom-rofi,
-#window,
-#tray,
-#disk,
-#cpu,
-#temperature,
-#temperature.critical,
-#backlight,
-#custom-memory,
-/*#pulseaudio.output,*/
-/*#pulseaudio.output.muted,*/
-/*#pulseaudio.source,*/
-/*#pulseaudio.source.source-muted,*/
-#clock {
-  font-family: JetBrainsMono Nerd Font Propo;
-  font-size: 14px;
-  font-weight: 400;
-  color: #202020;
-  background: #202020;
-  border-radius: 2px;
-}
-
-#window,
-#tray,
-#disk,
-#cpu,
-#temperature,
-#temperature.critical,
-#backlight,
-#custom-memory,
-#pulseaudio.output,
-#pulseaudio.output.muted,
-#pulseaudio.source,
-#pulseaudio.source.source-muted,
-#clock {
-  padding-right: 4px;
-  margin: 5px 0px;
-}
-
 #custom-rofi {
   /* border: 2px solid #458588; */
   /* border-radius: 5px; */
@@ -78,17 +42,11 @@ window#waybar {
   margin: 5px 0px;
 }
 
-/* ================================ */
-/*       workspaces module          */
-/* ================================ */
-
-#workspaces {
-  margin: 0px;
-}
-
 #workspaces button {
   color: #fff4d2;
   background: #282828;
+  border: 2px solid #282828;
+  border-radius: 12px;
   min-width: 25px;
   padding: 0 4px;
   margin: 5px 3px;
@@ -98,62 +56,6 @@ window#waybar {
   background: #282828;
   border: 2px solid #fff4d2;
   border-radius: 12px;
-}
-
-/* ================================ */
-/*            window                 */
-/* ================================ */
-
-#window {
-  color: #a89884;
-  background: #282828;
-  /* border: 2px solid #d3869b; */
-}
-
-/* ================================ */
-/*            tray                 */
-/* ================================ */
-
-#tray {
-  /* padding: 0 6px; */
-  background: #282828;
-}
-
-
-/* ================================ */
-/*            cpu                  */
-/* ================================ */
-#cpu {
-  color: #fbf1c7;
-  background: #282828;
-}
-
-/* ================================ */
-/*         pulseaudio               */
-/* ================================ */
-#pulseaudio.output
-#pulseaudio.source {
-  color: #fbf1c7;
-  background: #282828;
-}
-
-#pulseaudio.output.muted
-#pulseaudio.source.source-muted { 
-  color: #ea6962;
-  background: #282828;
-}
-
-/* ================================ */
-/*            clock                 */
-/* ================================ */
-#clock.time {
-  color: #fbf1c7;
-  background: #282828;
-}
-
-#clock.date {
-  color: #fbf1c7;
-  background: #282828;
 }
 
 #custom-notification {

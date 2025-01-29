@@ -13,7 +13,9 @@
     "hyprland/workspaces",
     "custom/paddc",
     "cpu",    
+    "custom/paddc",
     "custom/gpu-usage",
+    "custom/paddc",
     "memory",
     "custom/paddc",
     "tray",
@@ -25,9 +27,11 @@
 
   "modules-right": [
     "pulseaudio#source",
+    "custom/paddc",
     "pulseaudio#output",
     "custom/paddc",
     "custom/wifi",
+    "custom/paddc",
     "custom/paddc",
     "clock#date",
     "custom/paddc",
@@ -92,8 +96,8 @@
 
   "pulseaudio#output": {
     "scroll-step": 5,
-    "format": "<span color='#fbf1c7' >   </span>{volume}%",
-    "format-muted": "<span color='#fbf1c7' >   </span>{volume}%",
+    "format": "<span color='#fbf1c7' > </span>{volume:3}%",
+    "format-muted": "<span color='#cc241d' > </span>{volume:3}%",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "tooltip": false,
@@ -102,8 +106,8 @@
     
   "pulseaudio#source": {
     "format": "{format_source}",
-    "format-source": "<span color='#fbf1c7' >  </span>{volume}%",
-    "format-source-muted": "<span color='#fbf1c7' >  </span>{volume}%",
+    "format-source": "<span color='#fbf1c7' > </span>{volume:3}%",
+    "format-source-muted": "<span color='#cc241d' > </span>{volume:3}%",
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
     "tooltip": false,
