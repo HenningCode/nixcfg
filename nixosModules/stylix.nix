@@ -6,7 +6,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
-    image = ../../homeModules/hypr/mountain.jpg;
+    image = ../homeModules/hypr/mountain.jpg;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;

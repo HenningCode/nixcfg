@@ -16,6 +16,11 @@ in {
     });
   };
 
+  xdg.configFile.hypr= {
+    source = ./scripts;
+    recursive = true;
+  };
+
   programs.hyprlock = {
     enable = true;
     extraConfig = builtins.readFile (builtins.path {
