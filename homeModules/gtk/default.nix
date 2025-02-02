@@ -2,7 +2,7 @@
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
   home.file = {
-    ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}";
+    ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}/Gruvbox-Plus-Dark";
   };
 
   gtk = {
@@ -13,10 +13,10 @@ in {
     #   package = pkgs.adw-gtk3;
     # };
 
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-    };
+    # cursorTheme = {
+    #   name = "Bibata-Modern-Ice";
+    #   package = pkgs.bibata-cursors;
+    # };
 
     iconTheme = {
       name = "GruvboxPlus";
@@ -24,8 +24,8 @@ in {
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk";
-  };
+  # qt = {
+  #   enable = true;
+  #   platformTheme.name = "gtk";
+  # };
 }

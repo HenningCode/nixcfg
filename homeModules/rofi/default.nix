@@ -11,6 +11,8 @@
   xdg.configFile."rofi/config.rasi".text = ''
      configuration {
         font: "JetBrains Mono 12";
+        show-icons: true;
+        icon-theme: "GruvboxPlus";
 
         display-ssh:    "󰣀 ssh:";
         display-run:    "󱓞 run:";

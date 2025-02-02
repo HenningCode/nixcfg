@@ -21,6 +21,8 @@ in {
   boot.loader.grub.useOSProber = true;
 
   boot.supportedFilesystems = ["ntfs"];
+  services.logind.extraConfig = "HandlePowerKey=ignore";
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
@@ -60,7 +62,7 @@ in {
 
   hardware.graphics = {
     enable = true;
-    enable32Bit = true; 
+    enable32Bit = true;
   };
 
   services.xserver.videoDrivers = ["amdgpu"];
@@ -112,7 +114,12 @@ in {
     simple-scan
     heroic
     gparted
+    obsidian
   ];
+
+  programs.thunar.enable = true;
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
 
   environment.variables = {
     LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
