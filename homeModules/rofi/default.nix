@@ -3,14 +3,15 @@
   ...
 }: {
   
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-  };
+  # programs.rofi = {
+  #   enable = true;
+  #   package = pkgs.rofi-wayland;
+  # };
+  home.packages = with pkgs; [rofi-wayland];
 
   xdg.configFile."rofi/config.rasi".text = ''
      configuration {
-        font: "JetBrains Mono 12";
+        font: "JetBrains Mono 10";
         show-icons: true;
         icon-theme: "Gruvbox-Plus-Dark";
 
@@ -73,11 +74,9 @@
         anchor:   center;
         border-radius: 20px;
         height: 560px;
-        width: 600px;
+        width: 460px;
 
         background-color: @transparent;
-        border: 3;
-        border-color: @orange;
         spacing: 0;
         children:  [mainbox];
         orientation: horizontal;
@@ -158,7 +157,7 @@
     }
 
     element-text, element-icon {
-        size: 3ch;
+        size: 4.5ch;
         margin: 0 10 0 0;
         vertical-align: 0.5;
         background-color: inherit;
