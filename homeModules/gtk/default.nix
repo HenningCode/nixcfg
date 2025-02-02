@@ -19,8 +19,8 @@ in {
     };
 
     iconTheme = {
-      name = "GruvboxPlus";
-      package = gruvboxPlus;
+      name = "Gruvbox-Plus-Dark";
+      package = pkgs.gruvbox-plus-icons;
     };
   };
 

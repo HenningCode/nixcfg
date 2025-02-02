@@ -12,7 +12,7 @@
      configuration {
         font: "JetBrains Mono 12";
         show-icons: true;
-        icon-theme: "GruvboxPlus";
+        icon-theme: "Gruvbox-Plus-Dark";
 
         display-ssh:    "󰣀 ssh:";
         display-run:    "󱓞 run:";

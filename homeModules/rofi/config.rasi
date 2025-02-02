@@ -13,4 +13,3 @@ configuration {
     dpi: 120;
 }
 
-@theme "gruvbox-material"
