@@ -73,7 +73,8 @@
         location: center;
         anchor:   center;
         border-radius: 20px;
-        height: 560px;
+        border: 5px solid;
+        height: 570px;
         width: 460px;
 
         background-color: @transparent;
