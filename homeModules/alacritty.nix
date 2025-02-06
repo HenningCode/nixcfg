@@ -1,7 +1,4 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    ueberzugpp
-  ];
+{...}: {
   programs.alacritty = {
     enable = true;
     settings = {

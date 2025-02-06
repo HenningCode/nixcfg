@@ -5,6 +5,7 @@
   inputs,
   ...
 }: let
+  ueberzug_new = import ../../nixosModules/ueberzugpp.nix {inherit pkgs;};
 in {
   imports = [
     inputs.home-manager.nixosModules.default
@@ -115,6 +116,8 @@ in {
     heroic
     gparted
     obsidian
+    nautilus
+    ueberzug_new
   ];
 
   programs.thunar.enable = true;
