@@ -1,22 +1,17 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 35,
-  "width": 2200,
-  "spacing": 5,
-  "margin-bottom" :5,
-  "margin-right" :8,
-  "margin-left" :8,
+  "height": 0,
+  "spacing": 2,
+  "margin-top": 5,
+  "margin-bottom" :0,
+  "margin-right" :10,
+  "margin-left" :10,
 
   "modules-left": [
     "custom/rofi",
     "hyprland/workspaces",
     "custom/paddc",
-    "cpu",    
-    "custom/paddc",
-    "custom/gpu-usage",
-    "custom/paddc",
-    "memory",
     "custom/paddc",
     "tray",
   ],
@@ -26,14 +21,14 @@
   ],
 
   "modules-right": [
+    "cpu",    
+    "custom/paddc",
+    "custom/gpu-usage",
+    "custom/paddc",
+    "memory",
     "pulseaudio#source",
     "custom/paddc",
     "pulseaudio#output",
-    "custom/paddc",
-    "custom/wifi",
-    "custom/paddc",
-    "custom/paddc",
-    "clock#date",
     "custom/paddc",
     "clock#time",
     "custom/paddc",
@@ -63,19 +58,19 @@
 
   "cpu": {
     "interval": 1,
-    "format": "CPU{usage:3}%",
+    "format": "󰍛{usage:3}%",
   },
 
   "memory": {
-    "interval": 4,
-    "format": "MEM{percentage:3}%",
+    "interval": 1,
+    "format": "{percentage:3}%",
   },
 
   "custom/gpu-usage": {
       "exec": "radeontop -d - -l 1 | tr -d '\n' | cut -s -d ',' -f3 | cut -s -d ' ' -f3 | tr -d '%' | cut -d '.' -f 1 | awk '{ print $1 }' | tr -d '\n'",
-      "format": "GPU {}%",
+      "format": "󰊚 {}%",
       "return-type": "",
-      "interval": 4
+      "interval": 1
   },
 
   "hyprland/window": {
@@ -122,7 +117,7 @@
   },
 
   "clock#time": {
-    "format": "<span color='#cc241d' >󱑂 </span>{:%H:%M}",
+    "format": "󱑂 {:%H:%M}",
     "tooltip": false,
     // "tooltip-format": "Standard Time: {:%I:%M %p}",
     "min-length": 8,

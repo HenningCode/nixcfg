@@ -18,11 +18,11 @@
 
 /* the whole window */
 window#waybar {
-  background: #292828;
+  /*background: #292828;*/
   color: #fff4d2;
   padding: 0px 0px;
   margin: 0;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .modules-left {
@@ -45,17 +45,14 @@ window#waybar {
 #workspaces button {
   color: #fff4d2;
   background: #292828;
-  border: 2px solid #292828;
-  border-radius: 12px;
-  min-width: 25px;
-  padding: 0 4px;
-  margin: 5px 3px;
+  min-width: 7px;
+  padding: 5px;
+  margin: 5px;
 }
 
 #workspaces button:hover {
   background: #292828;
-  border: 2px solid #fff4d2;
-  border-radius: 12px;
+  color: #7daea3;
 }
 
 #custom-notification {
