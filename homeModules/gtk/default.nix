@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, lib, ...}: let
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
   home.file = {
@@ -26,6 +26,6 @@ in {
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = lib.mkForce "gtk";
   };
 }
