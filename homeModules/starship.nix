@@ -34,7 +34,7 @@
       };
 
       nix_shell = {
-        format = "[nix-shell]($style)";
+        format = "in [nix-shell]($style)";
       };
     };
   };
