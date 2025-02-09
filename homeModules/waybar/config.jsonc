@@ -17,7 +17,8 @@
   ],
 
   "modules-center": [
-    "hyprland/window"
+    "clock#date",
+    "clock#time",
   ],
 
   "modules-right": [
@@ -26,11 +27,10 @@
     "custom/gpu-usage",
     "custom/paddc",
     "memory",
+    "custom/paddc",
     "pulseaudio#source",
     "custom/paddc",
     "pulseaudio#output",
-    "custom/paddc",
-    "clock#time",
     "custom/paddc",
     "custom/notification",
   ],
@@ -73,17 +73,6 @@
       "interval": 1
   },
 
-  "hyprland/window": {
-    "format": "{class}",
-    "max-length": 20,
-    "rewrite": {
-      "": "<span foreground= '#458588'></span> hyprland",
-      "~": " terminal",
-      "com.mitchellh.ghostty": ">> ghostty",
-      "zen-beta": ">> zen"
-    }
-  },
-
   "tray": {
     "icon-size": 15,
     "spacing": 8
@@ -101,8 +90,8 @@
     
   "pulseaudio#source": {
     "format": "{format_source}",
-    "format-source": "<span color='#fbf1c7' > </span>{volume:3}%",
-    "format-source-muted": "<span color='#cc241d' > </span>{volume:3}%",
+    "format-source": "<span color='#fbf1c7' ></span>",
+    "format-source-muted": "<span color='#cc241d' ></span>",
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
     "tooltip": false,
@@ -112,16 +101,13 @@
   },
 
   "clock#date": {
-    "format": "<span color='#8ec07c' >󰃭 </span>{:%a %d %b}",
+    "format": "{:%d %b %y} | ",
     "tooltip": false,
   },
 
   "clock#time": {
-    "format": "󱑂 {:%H:%M}",
+    "format": "{:%H:%M}",
     "tooltip": false,
-    // "tooltip-format": "Standard Time: {:%I:%M %p}",
-    "min-length": 8,
-    "max-length": 12
   },
 
   "custom/paddc": {
