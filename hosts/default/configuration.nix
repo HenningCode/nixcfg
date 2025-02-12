@@ -118,6 +118,7 @@ in {
     obsidian
     nautilus
     ueberzug_new
+    okular
   ];
 
   programs.thunar.enable = true;

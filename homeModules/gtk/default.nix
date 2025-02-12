@@ -1,9 +1,21 @@
-{pkgs, lib, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   gruvboxPlus = import ./gruvbox-plus.nix {inherit pkgs;};
 in {
   home.file = {
     ".local/share/icons/GruvboxPlus".source = "${gruvboxPlus}/Gruvbox-Plus-Dark";
   };
+
+  nixpkgs.overlays = [
+    (final: prev: {
+      gruvboxPlus = prev.gruvboxPlus.overrideAttrs {
+            dontCheckForBrokenSymlinks = true;
+      };
+    })
+  ];
 
   gtk = {
     enable = true;
@@ -19,8 +31,8 @@ in {
     };
 
     iconTheme = {
-      name = "Gruvbox-Plus-Dark";
-      package = pkgs.gruvbox-plus-icons;
+      name = "GruvboxPlus";
+      package = gruvboxPlus;
     };
   };
 

@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "jstkdng";
     repo = "ueberzugpp-new";
-    rev = "08f337c6abe3f0d5fc5d4b258e653f5aaa37466c";
+    rev = "master";
     hash = "sha256-ufILtiIDx7N5sOsS49+9SaI4NaABhi0URpZgofTJz1o=";
     fetchSubmodules = true;
   };

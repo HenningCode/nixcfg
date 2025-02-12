@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, inputs, ...}: let
   wallpaper = "/home/henning/dotfiles/homeModules/hypr/mountain.jpg";
 in {
   home.packages = with pkgs; [
@@ -11,6 +11,9 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     extraConfig = builtins.readFile (builtins.path {
       path = ./hypr/hyprland.conf;
     });

@@ -10,6 +10,7 @@ in
     };
 
     dontUnpack = true;
+    dontCheckForBrokenSymlinks = true;
 
     installPhase = ''
       mkdir -p $out
