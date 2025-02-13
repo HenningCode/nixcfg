@@ -12,6 +12,7 @@
     ../../homeModules/gtk
     ../../homeModules/rofi
     ../../homeModules/starship.nix
+    ../../homeModules/vscode.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
